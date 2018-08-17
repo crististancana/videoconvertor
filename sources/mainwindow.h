@@ -12,6 +12,7 @@
 #include <QDebug>
 #include <QtConcurrent/QtConcurrentRun>
 #include <QFuture>
+#include <QElapsedTimer>
 
 //Define ffmpeg macros
 #define FFMPEG_INPUT_FILE_COMMAND "ffmpeg -i "
@@ -69,6 +70,8 @@ private:
     QMediaPlayer* player;
     QVideoWidget* vw;
     QProgressBar* bar;
+    QTimer* timer;
+    QElapsedTimer *eltimer;
     QSlider* slider;
     QString mfilename;
     QString fileName_witoutextention;

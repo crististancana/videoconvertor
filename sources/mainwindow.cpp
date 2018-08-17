@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "cmdwrapper.h"
+//#include "MediaInfo/MediaInfo.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -20,6 +21,15 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(player,&QMediaPlayer::durationChanged,bar,&QProgressBar::setMaximum);
     connect(player,&QMediaPlayer::positionChanged,bar,&QProgressBar::setValue);
+
+    connect(player, &QMediaPlayer::durationChanged, this, [&](qint64 dur) {
+    ui->label_10->setText(QString::number(dur));
+    });
+
+    connect(player, &QMediaPlayer::positionChanged, this, [&](qint64 pos) {
+    ui->label_13->setText(QString::number(pos));
+    });
+
 }
 //Setup for gui elements
 void MainWindow::setup_gui_elements()
@@ -58,6 +68,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 //Open file button press
 void MainWindow::on_pushButton_clicked()
 {
@@ -80,6 +91,7 @@ void MainWindow::on_pushButton_clicked()
         //TODO pop up with eroare
     }
     QFileInfo fileinfo(filename);
+
     if(fileinfo.exists(filename))
     {
         sizeOriginalFile = fileinfo.size();
