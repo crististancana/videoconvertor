@@ -62,6 +62,10 @@ public:
     QPushButton *pushButton_7;
     QLabel *label_9;
     QPushButton *pushButton_9;
+    QLabel *label_10;
+    QLabel *label_11;
+    QLabel *label_12;
+    QLabel *label_13;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -94,7 +98,7 @@ public:
         pushButton_5->setFont(font);
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(20, 400, 61, 31));
+        label_2->setGeometry(QRect(20, 400, 81, 31));
         label_2->setFont(font);
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
@@ -216,6 +220,26 @@ public:
         pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
         pushButton_9->setGeometry(QRect(100, 400, 31, 31));
         pushButton_9->setFont(font);
+        label_10 = new QLabel(centralWidget);
+        label_10->setObjectName(QStringLiteral("label_10"));
+        label_10->setGeometry(QRect(1020, 470, 101, 20));
+        QFont font1;
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        label_10->setFont(font1);
+        label_11 = new QLabel(centralWidget);
+        label_11->setObjectName(QStringLiteral("label_11"));
+        label_11->setGeometry(QRect(990, 440, 101, 21));
+        label_11->setFont(font1);
+        label_12 = new QLabel(centralWidget);
+        label_12->setObjectName(QStringLiteral("label_12"));
+        label_12->setGeometry(QRect(990, 510, 101, 21));
+        label_12->setFont(font1);
+        label_13 = new QLabel(centralWidget);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setGeometry(QRect(1020, 540, 121, 21));
+        label_13->setFont(font1);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -239,10 +263,10 @@ public:
         pushButton->setText(QApplication::translate("MainWindow", "Open", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "CONVERSION TYPE", Q_NULLPTR));
         pushButton_5->setText(QApplication::translate("MainWindow", "CONVERT", Q_NULLPTR));
-        label_2->setText(QApplication::translate("MainWindow", "CUT VIDEO", Q_NULLPTR));
+        label_2->setText(QApplication::translate("MainWindow", "CROP VIDEO", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindow", "From:", Q_NULLPTR));
         label_4->setText(QApplication::translate("MainWindow", "To:", Q_NULLPTR));
-        pushButton_6->setText(QApplication::translate("MainWindow", "CUT", Q_NULLPTR));
+        pushButton_6->setText(QApplication::translate("MainWindow", "CROP", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("MainWindow", "STOP", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("MainWindow", "PAUSE", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindow", "PLAY", Q_NULLPTR));
@@ -254,6 +278,10 @@ public:
         pushButton_7->setText(QApplication::translate("MainWindow", "GET CONVERTED FILE SIZE", Q_NULLPTR));
         label_9->setText(QApplication::translate("MainWindow", "PRESS AFTER CONVERSION", Q_NULLPTR));
         pushButton_9->setText(QApplication::translate("MainWindow", "?", Q_NULLPTR));
+        label_10->setText(QApplication::translate("MainWindow", "File not loaded", Q_NULLPTR));
+        label_11->setText(QApplication::translate("MainWindow", "VideoDuration", Q_NULLPTR));
+        label_12->setText(QApplication::translate("MainWindow", "Time spent", Q_NULLPTR));
+        label_13->setText(QApplication::translate("MainWindow", "Video not started", Q_NULLPTR));
     } // retranslateUi
 
 };
